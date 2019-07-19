@@ -12,7 +12,7 @@ public class SerialMultiplier {
         int row_col = matrix1[0].length;
         int columns = matrix2[0].length;
 
-        result = new double[rows][columns];
+//        result = new double[rows][columns];
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
                 result[i][j] = 0;
