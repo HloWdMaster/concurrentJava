@@ -47,7 +47,7 @@ public class ParallelGroupFileTask implements Runnable {
         }
         for (File content : contents) {
             if (content.isDirectory()) {
-                proccessDirectory(file, fileName, parallelResult);
+                proccessDirectory(content, fileName, parallelResult);
                 if (Thread.currentThread().isInterrupted()) {
                     throw new InterruptedException();
                 }
@@ -55,7 +55,7 @@ public class ParallelGroupFileTask implements Runnable {
                     return;
                 }
             } else {
-                proccessFile(file,fileName,parallelResult);
+                proccessFile(content,fileName,parallelResult);
                 if (Thread.currentThread().isInterrupted()) {
                     throw new InterruptedException();
                 }
@@ -71,6 +71,7 @@ public class ParallelGroupFileTask implements Runnable {
         if (content.getName().equals(fileName)) {
             parallelResult.setFound(true);
             parallelResult.setPath(content.getAbsolutePath());
+            System.out.printf("Parallel Search: Path: %s%n",parallelResult.getPath());
         }
     }
 

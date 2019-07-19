@@ -9,6 +9,7 @@ import java.util.concurrent.ConcurrentLinkedDeque;
  * Create by leonardo on 2019/7/19
  */
 public class ParallelGroupFileSearch {
+
     public static void searchFile(File file, String fileName, Result parallelResult) {
         ConcurrentLinkedDeque<File> directories = new ConcurrentLinkedDeque<>();
         File[] contents = file.listFiles();
