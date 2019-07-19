@@ -11,10 +11,10 @@ import java.util.Date;
  */
 public class FileSearchMain {
     public static void main(String[] args) {
-        Date start1 = new Date();
-        SerialFileSearch.searchFile(new File("D:\\AppServ"),"phpinfo.php",new Result());
-        Date end1 = new Date();
-        System.out.printf("Serial cost: %d%n",end1.getTime()-start1.getTime());
+//        Date start1 = new Date();
+//        SerialFileSearch.searchFile(new File("D:\\AppServ"),"phpinfo.php",new Result());
+//        Date end1 = new Date();
+//        System.out.printf("Serial cost: %d%n",end1.getTime()-start1.getTime());
 
         Date start2 = new Date();
         ParallelGroupFileSearch.searchFile(new File("D:\\AppServ"),"phpinfo.php",new Result());
