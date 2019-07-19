@@ -1,5 +1,7 @@
 package matrix.parallel.individual;
 
+import common.util.ThreadUtil;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,21 +21,12 @@ public class ParallelIndividualMultiplier {
                 thread.start();
                 threads.add(thread);
                 if (threads.size() % 10 == 0) {
-                    waitForThreads(threads);
+                    ThreadUtil.waitForThreads(threads);
                 }
             }
         }
 
     }
 
-    private static void waitForThreads(List<Thread> threads) {
-        for (Thread thread : threads) {
-            try {
-                thread.join();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
-        threads.clear();
-    }
+
 }

@@ -1,5 +1,7 @@
 package matrix.parallel.row;
 
+import common.util.ThreadUtil;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,19 +17,9 @@ public class RowParallelMultiplier {
             thread.start();
             threads.add(thread);
             if (i % 10 == 0) {
-                waitForThreads(threads);
+                ThreadUtil.waitForThreads(threads);
             }
         }
     }
 
-    private static void waitForThreads(List<Thread> threads) {
-        for (Thread thread : threads) {
-            try {
-                thread.join();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
-        threads.clear();
-    }
 }
