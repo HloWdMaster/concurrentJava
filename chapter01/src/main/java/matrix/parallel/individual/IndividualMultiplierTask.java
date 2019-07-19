@@ -1,7 +1,5 @@
 package matrix.parallel.individual;
 
-import java.io.PipedReader;
-
 /**
  * Create by leonardo on 2019/7/19
  */
