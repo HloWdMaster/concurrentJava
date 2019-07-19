@@ -10,8 +10,8 @@ import java.util.Date;
 public class GroupParallelMain {
 
     public static void main(String[] args) {
-        double[][] matrix1 = MatrixGenerator.gengerate(2000, 300);
-        double[][] matrix2 = MatrixGenerator.gengerate(300, 5000);
+        double[][] matrix1 = MatrixGenerator.gengerate(200, 3000);
+        double[][] matrix2 = MatrixGenerator.gengerate(3000, 500);
         double[][] result = new double[matrix1.length][matrix2[0].length];
         Date start = new Date();
         GroupParallelMultiplier.multiply(matrix1, matrix2, result);
