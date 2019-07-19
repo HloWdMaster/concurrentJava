@@ -9,7 +9,7 @@ import java.io.File;
  */
 public class SerialFileSearch {
 
-    public static void fileSearch(File file, String fileName, Result result) {
+    public static void searchFile(File file, String fileName, Result result) {
         File[] contents;
         contents = file.listFiles();
         if (contents==null || contents.length == 0) {
@@ -17,7 +17,7 @@ public class SerialFileSearch {
         }
         for (File content : contents) {
             if (content.isDirectory()) {
-                fileSearch(content,fileName,result);
+                searchFile(content,fileName,result);
             }else{
                 if (content.getName().equals(fileName)) {
                     result.setFound(true);
