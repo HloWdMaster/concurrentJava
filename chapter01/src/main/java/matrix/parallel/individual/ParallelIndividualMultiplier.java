@@ -1,4 +1,4 @@
-package matrix.parallel;
+package matrix.parallel.individual;
 
 import java.util.ArrayList;
 import java.util.List;

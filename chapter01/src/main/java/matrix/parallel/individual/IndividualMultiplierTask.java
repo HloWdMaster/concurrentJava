@@ -1,4 +1,4 @@
-package matrix.parallel;
+package matrix.parallel.individual;
 
 import java.io.PipedReader;
 

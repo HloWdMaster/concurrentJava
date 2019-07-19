@@ -1,7 +1,6 @@
-package matrix.parallel;
+package matrix.parallel.individual;
 
 import matrix.serial.MatrixGenerator;
-import matrix.serial.SerialMultiplier;
 
 import java.util.Date;
 
